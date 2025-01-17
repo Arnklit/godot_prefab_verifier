@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkkk7tvtlqhbj"]
+
+[ext_resource type="PackedScene" uid="uid://c4csoc2csl8xd" path="res://prefabs/custom_button.tscn" id="1_lr74r"]
+[ext_resource type="Texture2D" uid="uid://drdhidkv20ly4" path="res://icon.svg" id="2_5ocx1"]
+
+[node name="TestScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CustomButton" parent="." instance=ExtResource("1_lr74r")]
+layout_mode = 0
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Fun name" type="Node2D" parent="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="Node2D/Fun name"]
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 417.0
+offset_right = 148.0
+offset_bottom = 425.0
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(140, 417)
+texture = ExtResource("2_5ocx1")
+
+[node name="TextEdit" type="TextEdit" parent="Icon2"]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Node" type="Node" parent="Icon2/TextEdit"]
+
+[node name="Control" type="Control" parent="Icon2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Node" type="Node" parent="Icon2"]
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Node" type="Node" parent="Node"]

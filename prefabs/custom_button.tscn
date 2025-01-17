@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4csoc2csl8xd"]
+
+[ext_resource type="Script" path="res://prefabs/custom_button.gd" id="1_42ywc"]
+
+[node name="CustomButton" type="Button"]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Custom Button"
+script = ExtResource("1_42ywc")
+
+[node name="Control_2" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control_3" type="Control" parent="Control_2"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
