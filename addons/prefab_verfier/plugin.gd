@@ -26,7 +26,7 @@ func _draw() -> void:
 	
 	while (it):
 		var node = get_node_or_null(it.get_metadata(0))
-		if node.scene_file_path == "res://prefabs/custom_button.tscn":
+		if node and node.scene_file_path == "res://prefabs/custom_button.tscn":
 			it = it.get_next_in_tree()
 			continue
 		
