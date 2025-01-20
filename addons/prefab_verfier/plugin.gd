@@ -40,7 +40,7 @@ func _draw() -> void:
 		it = it.get_next_in_tree()
 
 
-func _button_warning_clicked(item: TreeItem, column: int, id: int, mouse_button_index: int) -> void:
+func _button_warning_clicked(item, column: int, id: int, mouse_button_index: int) -> void:
 	if id == BUTTON_WARNING_ID:
 		warning_dialog = AcceptDialog.new()
 		warning_dialog.dialog_text = "Use the prefab when making buttons!"
