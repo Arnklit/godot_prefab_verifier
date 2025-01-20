@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkkk7tvtlqhbj"]
+[gd_scene load_steps=5 format=3 uid="uid://bkkk7tvtlqhbj"]
 
 [ext_resource type="PackedScene" uid="uid://c4csoc2csl8xd" path="res://prefabs/custom_button.tscn" id="1_lr74r"]
 [ext_resource type="Texture2D" uid="uid://drdhidkv20ly4" path="res://icon.svg" id="2_5ocx1"]
 [ext_resource type="Script" path="res://prefabs/custom_button.gd" id="2_ssy3s"]
+[ext_resource type="PackedScene" uid="uid://bji4rxxv8uv41" path="res://prefabs/inherited_custom_button.tscn" id="4_bmpu7"]
 
 [node name="TestScene" type="Control"]
 layout_mode = 3
@@ -13,6 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="CustomButton" parent="." instance=ExtResource("1_lr74r")]
+layout_mode = 0
 offset_right = 125.0
 offset_bottom = 31.0
 
@@ -31,6 +33,7 @@ offset_right = 8.0
 offset_bottom = 8.0
 
 [node name="Button" type="Button" parent="Icon2/TextEdit"]
+layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 
@@ -45,11 +48,15 @@ offset_bottom = 40.0
 [node name="Node" type="Node" parent="Icon2"]
 
 [node name="CustomButton2" type="Button" parent="."]
+layout_mode = 0
 offset_left = 140.0
 offset_top = 417.0
 offset_right = 148.0
 offset_bottom = 425.0
 script = ExtResource("2_ssy3s")
+
+[node name="InheritedCustomButton" parent="." instance=ExtResource("4_bmpu7")]
+layout_mode = 0
 
 [node name="Node" type="Node" parent="."]
 
