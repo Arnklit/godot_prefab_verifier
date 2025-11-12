@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c4csoc2csl8xd" path="res://prefabs/custom_button.tscn" id="1_lr74r"]
 [ext_resource type="Texture2D" uid="uid://drdhidkv20ly4" path="res://icon.svg" id="2_5ocx1"]
-[ext_resource type="Script" path="res://prefabs/custom_button.gd" id="2_ssy3s"]
+[ext_resource type="Script" uid="uid://df4ny6khlpin" path="res://prefabs/custom_button.gd" id="2_ssy3s"]
 [ext_resource type="PackedScene" uid="uid://bji4rxxv8uv41" path="res://prefabs/inherited_custom_button.tscn" id="4_bmpu7"]
 
 [node name="TestScene" type="Control"]

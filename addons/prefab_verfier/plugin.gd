@@ -20,23 +20,28 @@ func _exit_tree() -> void:
 
 func _draw() -> void:
 	var it: TreeItem = scene_tree.get_root()
-	
-	var icon: Texture2D
-	icon = get_editor_interface().get_base_control().get_theme_icon("NodeWarning", "EditorIcons")
-	
+	var icon: Texture2D = get_editor_interface().get_base_control().get_theme_icon("NodeWarning", "EditorIcons")
+
 	while (it):
-		var node = get_node_or_null(it.get_metadata(0))
-		if node and node.scene_file_path == "res://prefabs/custom_button.tscn":
+		var node: Button = get_node_or_null(it.get_metadata(0)) as Button
+		if not node:
 			it = it.get_next_in_tree()
 			continue
-		
-		if node is Button:
+
+		var is_disallowed := true
+		var scene_state := node.get_scene_instance_state()
+		while scene_state:
+			if scene_state.get_path() == "res://prefabs/custom_button.tscn":
+				is_disallowed = false
+			scene_state = scene_state.get_base_scene_state() # Needs godotengine/godot#104656
+
+		if is_disallowed:
 			var last_it_button = null
 			if it.get_button_count(0) > 0:
 				last_it_button =  it.get_button(0, it.get_button_count(0) -1)
 			if last_it_button == null or last_it_button != icon:
 				it.add_button(0, icon, BUTTON_WARNING_ID, false, "Don't Use Buttons")
-		
+
 		it = it.get_next_in_tree()
 
 
