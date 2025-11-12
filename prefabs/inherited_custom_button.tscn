@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bji4rxxv8uv41"]
+
+[ext_resource type="PackedScene" uid="uid://c4csoc2csl8xd" path="res://prefabs/custom_button.tscn" id="1_ndvfc"]
+
+[node name="InheritedCustomButton" instance=ExtResource("1_ndvfc")]
+text = "Inherited Custom Button"
